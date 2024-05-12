@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp">
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginHorizontal="7dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="7dp"
+                android:id="@+id/newCanvas"
+                android:background="@drawable/create_canvas"
+                android:layout_columnWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="7dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/canvas_thumbnail"
+                android:text="Lorem Ipsum"
+                android:layout_columnWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="7dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/canvas_thumbnail"
+                android:text="Lorem Ipsum"
+                android:layout_columnWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="7dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/canvas_thumbnail"
+                android:text="Lorem Ipsum"
+                android:layout_columnWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_margin="7dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:background="@drawable/canvas_thumbnail"
+                android:text="Lorem Ipsum"
+                android:layout_columnWeight="1" />
+
+        </GridLayout>
+
+    </ScrollView>
+
+</LinearLayout>

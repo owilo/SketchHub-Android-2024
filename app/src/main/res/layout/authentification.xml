@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/username"
+        android:fontFamily="sans-serif-black" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/ellipsis"
+        android:paddingLeft="16dp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:scrollHorizontally="true"
+        android:background="@drawable/input_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/password"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/ellipsis"
+        android:paddingLeft="16dp"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:scrollHorizontally="true"
+        android:background="@drawable/input_bar" />
+
+    <Button
+        android:id="@+id/authenticate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:text="@string/authenticate"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/noAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/noAccount"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/forgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgotPassword"
+        android:layout_marginHorizontal="16dp"
+        android:textSize="16sp" />
+
+</LinearLayout>

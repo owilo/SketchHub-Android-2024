@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/user_invite"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/profile" />
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignTop="@id/userAvatar"
+        android:layout_alignRight="@id/userAvatar"
+        android:background="@drawable/small_premium_badge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/userAvatar"
+        android:text="@string/anonymousUser"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/blue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/defaultTitle"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <View
+        android:id="@+id/acceptInvitation"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginVertical="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/accept_button" />
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginVertical="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/acceptInvitation"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/cross_button" />
+
+</RelativeLayout>

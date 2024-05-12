@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exportName"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/exportName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:hint="@string/defaultTitle"
+        android:paddingLeft="16dp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:scrollHorizontally="true"
+        android:textSize="14sp"
+        android:background="@drawable/input_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exportFormat"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:id="@+id/exportFormat"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingLeft="8dp"
+        android:textSize="14sp"
+        android:background="@drawable/input_bar"
+        android:entries="@array/exportFormats" />
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exportFormats">
+        <item>BMP</item>
+        <item>JPEG</item>
+        <item>PNG</item>
+    </string-array>
+</resources>
