@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.sketchhub.PageChangeListener
 import com.example.sketchhub.R
 
 class Profile : Fragment() {
@@ -21,6 +22,8 @@ class Profile : Fragment() {
     private lateinit var changePasswordAlertDialog: AlertDialog
     private lateinit var invitationAlertDialog: AlertDialog
 
+    private var pageChangeListener: PageChangeListener? = null
+
     override fun onCreateView(
         inflater: LayoutInflater?,
         container: ViewGroup?,
@@ -33,6 +36,7 @@ class Profile : Fragment() {
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         profileListener = context as ProfileListener
+        pageChangeListener = context as PageChangeListener
 
         changePasswordAlertDialog = AlertDialog.Builder(context)
             .setTitle(getString(R.string.passwordChange))
@@ -49,8 +53,16 @@ class Profile : Fragment() {
             .create()
     }
 
+    override fun onDetach() {
+        super.onDetach()
+
+        pageChangeListener = null
+    }
+
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        pageChangeListener?.onPageChanged(getString(R.string.profile))
 
         view?.findViewById<Button>(R.id.passwordChangeButton)?.setOnClickListener {
             changePasswordAlertDialog.show()

@@ -13,6 +13,7 @@
         android:fontFamily="sans-serif-black" />
 
     <EditText
+        android:id="@+id/registerUsername"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/ellipsis"
@@ -31,6 +32,7 @@
         android:fontFamily="sans-serif-black" />
 
     <EditText
+        android:id="@+id/registerEmail"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/ellipsis"
@@ -49,6 +51,7 @@
         android:fontFamily="sans-serif-black" />
 
     <EditText
+        android:id="@+id/registerPassword"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/ellipsis"
@@ -59,6 +62,7 @@
         android:background="@drawable/input_bar" />
 
     <CheckBox
+        android:id="@+id/registerSeekJob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/seekJob"
@@ -69,14 +73,17 @@
         android:scaleY="1.4" />
 
     <TextView
+        android:id="@+id/registerTextSurname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:text="@string/surname"
         android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"
+        android:visibility="gone" />
 
     <EditText
+        android:id="@+id/registerSurname"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/ellipsis"
@@ -84,17 +91,22 @@
         android:singleLine="true"
         android:inputType="text"
         android:scrollHorizontally="true"
-        android:background="@drawable/input_bar" />
+        android:background="@drawable/input_bar"
+        android:visibility="gone" />
+
 
     <TextView
+        android:id="@+id/registerTextCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:text="@string/city"
         android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-black" />
+        android:fontFamily="sans-serif-black"
+        android:visibility="gone" />
 
     <EditText
+        android:id="@+id/registerCity"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/ellipsis"
@@ -102,7 +114,8 @@
         android:singleLine="true"
         android:inputType="text"
         android:scrollHorizontally="true"
-        android:background="@drawable/input_bar" />
+        android:background="@drawable/input_bar"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/registerButton"

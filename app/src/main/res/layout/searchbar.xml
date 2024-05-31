@@ -5,6 +5,7 @@
     android:layout_height="wrap_content">
 
     <EditText
+        android:id="@+id/searchBarInput"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_weight="1"
@@ -23,6 +24,7 @@
         android:background="@drawable/advanced_search" />
 
     <View
+        android:id="@+id/performSearch"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/search" />

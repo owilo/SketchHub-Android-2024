@@ -7,11 +7,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import com.example.sketchhub.R
+import com.example.sketchhub.SearchFilterListener
 
 class Searchbar : Fragment() {
 
+
+
     private lateinit var advancedSearchDialog: AlertDialog
+
+    private lateinit var searchFilterListener: SearchFilterListener
 
     override fun onCreateView(
         inflater: LayoutInflater?,
@@ -24,6 +30,8 @@ class Searchbar : Fragment() {
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
+        searchFilterListener = context as SearchFilterListener
+
         advancedSearchDialog = AlertDialog.Builder(context)
             .setTitle(getString(R.string.advancedSearch))
             .setView(R.layout.advanced_search_dialog)
@@ -38,6 +46,10 @@ class Searchbar : Fragment() {
 
         view?.findViewById<View>(R.id.advancedSearch)?.setOnClickListener {
             advancedSearchDialog.show()
+        }
+
+        view?.findViewById<View>(R.id.performSearch)?.setOnClickListener {
+            searchFilterListener.filterSearch(view.findViewById<EditText>(R.id.searchBarInput).text.toString().lowercase())
         }
     }
 

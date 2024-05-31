@@ -23,6 +23,8 @@ class DrawView : Activity(), UserAvatar.UserAvatarListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.drawing)
 
+        startService(Intent(this, DrawingManager::class.java))
+
         fragmentManager.beginTransaction()
             .add(R.id.profile, UserAvatar())
             .commit()

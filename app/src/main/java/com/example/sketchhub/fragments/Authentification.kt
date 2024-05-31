@@ -8,18 +8,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import com.example.sketchhub.GeneralView
+import com.example.sketchhub.PageChangeListener
 import com.example.sketchhub.R
 
 class Authentification : Fragment() {
 
     interface AuthentificationListener {
-        fun onAuthenticate()
+        fun onAuthenticate(username: String, password: String)
         fun onNoAccountClick()
     }
 
     private lateinit var forgotPasswordAlertDialog: AlertDialog
 
     private lateinit var authentificationListener: AuthentificationListener
+
+    private var pageChangeListener: PageChangeListener? = null
 
     override fun onCreateView(
         inflater: LayoutInflater?,
@@ -33,6 +38,7 @@ class Authentification : Fragment() {
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         authentificationListener = context as AuthentificationListener
+        pageChangeListener = context as PageChangeListener
 
         forgotPasswordAlertDialog = AlertDialog.Builder(context)
             .setTitle(getString(R.string.passwordForgotten))
@@ -42,11 +48,21 @@ class Authentification : Fragment() {
             .create()
     }
 
+    override fun onDetach() {
+        super.onDetach()
+
+        pageChangeListener = null
+    }
+
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        pageChangeListener?.onPageChanged(getString(R.string.authentification))
 
         view?.findViewById<Button>(R.id.authenticate)?.setOnClickListener {
-            authentificationListener.onAuthenticate()
+            authentificationListener.onAuthenticate(
+                view.findViewById<EditText>(R.id.authenticateUsername).text.toString(),
+                view.findViewById<EditText>(R.id.authenticatePassword).text.toString(),
+            )
         }
 
         view?.findViewById<Button>(R.id.noAccount)?.setOnClickListener {

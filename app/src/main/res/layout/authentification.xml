@@ -13,6 +13,7 @@
         android:fontFamily="sans-serif-black" />
 
     <EditText
+        android:id="@+id/authenticateUsername"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/ellipsis"
@@ -31,6 +32,7 @@
         android:fontFamily="sans-serif-black" />
 
     <EditText
+        android:id="@+id/authenticatePassword"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="@string/ellipsis"
